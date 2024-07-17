@@ -170,6 +170,7 @@ try {
     userId: req.user.userId, // Используем userId из токена для зарегистрированных пользователей
     expiresInDays: isPermanent ? null : expiresInDays,
   });
+    host= req.headers.host ;
   newUrl.clicks = 0; // Установите начальное значение кликов в 0
   await newUrl.save(); // Сохраните обновленные данные
     res.json({ shortUrl, host });
@@ -209,6 +210,7 @@ try {
     userId: null, // Используем userId из токена для зарегистрированных пользователей
     expiresInDays: isPermanent ? null : expiresInDays,
   });
+    host= req.headers.host;
   newUrl.clicks = 0; // Установите начальное значение кликов в 0
   await newUrl.save(); // Сохраните обновленные данные
     res.json({ shortUrl, host });
@@ -262,7 +264,6 @@ app.get('/:shortUrl', async (req, res) => {
 
 app.get('/', (req, res) => {
   
-  host = req.headers.host;
   res.sendFile(__dirname + '/public/index.html');
 });
 
