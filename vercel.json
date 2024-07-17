@@ -15,6 +15,14 @@
       "src": "/(.*)",
       "dest": "/"
     },
+     {
+      "src": "/(.*)",
+      "dest": "/public"
+    },
+    {
+      "src":  "/public/index.html",
+      "dest": "/public"
+    },
     {
       "src": "/public/index.html",
       "dest": "/api.js"
