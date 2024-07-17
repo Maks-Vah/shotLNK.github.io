@@ -263,7 +263,7 @@ app.get('/:shortUrl', async (req, res) => {
 app.get('/', (req, res) => {
   
   host = req.headers.host;
-  res.sendFile(__dirname + '/index.html');
+  res.sendFile(__dirname + '/public/index.html');
 });
 
 module.exports = app;
