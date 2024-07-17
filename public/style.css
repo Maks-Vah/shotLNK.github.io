@@ -1,0 +1,202 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #007bff; /* Голубой цвет */
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  font-size: 1em;
+  margin: 10px 0; 
+}
+
+button:hover {
+  background-color: #1069d9; /* Темнее голубой цвет */
+}
+
+#shortened-url {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+#shortened-url span {
+  color: #007bff; /* Голубой цвет */
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Стиль для блока с кнопками входа и регистрации */
+#auth-area,
+#user-info {
+  position: fixed;
+  
+  top: 10px;
+  right: 10px;
+  display: flex;
+  width: 20%;
+   flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  z-index: 100;/* Чтобы блок был выше других элементов */
+}
+#auth-area .register-button,
+#auth-area .login-button {
+    align-self: flex-start; /* Отдельное выравнивание для кнопок */
+ 
+}
+.user-info {
+  font-size: 20px;
+  color: #007bff;
+}
+
+#user-links-button {
+    display: inline-block;
+    padding: 8px 12px; /* Отступы кнопки */
+    margin-top: 10px; /* Отступ сверху */
+    background-color: #007bff; /* Цвет фона кнопки */
+    color: white; /* Цвет текста */
+    border: none; /* Удаление границы */
+    border-radius: 5px; /* Закругление углов */
+    text-decoration: none; /* Удаление подчеркивания текста */
+    text-align: center; /* Центрирование текста */
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  max-width: 90%;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0; 
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.close:hover {
+  transform: scale(1.9);
+}
+
+.close svg {
+  stroke: #000;
+  stroke-width: 2;
+}
+
+/* Дополнительные стили для форм */
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="email"],
+.modal-content input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal-content button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.qrcode {
+  display: flex;
+  justify-content: center;
+  /* Центрирование по вертикали */
+  align-items: center;
+   margin: 20px 0; 
+}
+.sidebar {
+  
+  display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+  
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+.sidebar h2 {
+    text-align: center; /* Центрирование заголовка */
+}
+.user-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.user-links li {
+  margin-bottom: 5px;
+}
+
+#logout-button {
+    width: auto; /* Автоматическая ширина кнопки */
+}
