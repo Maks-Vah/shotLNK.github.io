@@ -7,10 +7,6 @@
     }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/api.js"
-    },
      {
       "src": "/(.*)",
       "dest": "/"
@@ -18,22 +14,6 @@
      {
       "src": "/(.*)",
       "dest": "/public"
-    },
-    {
-      "src":  "/public/index.html",
-      "dest": "/public"
-    },
-    {
-      "src": "/public/index.html",
-      "dest": "/api.js"
-    },
-     {
-      "src": "/public/index.html",
-      "dest": "/(.*)"
-    },
-      {
-      "src": "/public/index.html",
-      "dest": "/public/style.css"
     }
   ]
 }
