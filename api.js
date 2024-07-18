@@ -244,7 +244,7 @@ app.get('/:shortUrl', async (req, res) => {
         user = await User.findOne({ where: { id: url.userId } });
       }
       // Перенаправление на оригинальный URL
-      res.redirect(307, url.originalUrl);
+       res.redirect(307, "https://"+url.originalUrl);
       // Создание записи о клике
       await Click.create({
         urlId: url.id,
