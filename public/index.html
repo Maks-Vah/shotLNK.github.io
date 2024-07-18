@@ -59,7 +59,7 @@
             <hr /> 
             <div class="sqrcode"></div> 
             <div class="qrcode"></div> 
-            <input type="text" 
+            <input class="inputQR" type="text" 
                    placeholder="Paste a URL"  
                    onchange="generateQr()" /> 
             <!--generateQr() is the fuction which helps 
@@ -344,11 +344,11 @@
 
         // Function to generate QR 
         // code based on user input 
-        function generateQr() { 
+          function generateQr() { 
             if ( 
-                document.querySelector("input") 
+                document.querySelector(".inputQR") 
                     .value === "" || 
-                document.querySelector("input") 
+                document.querySelector(".inputQR") 
                     .value === " ") { 
                 alert( 
                     "Input Field Can not be blank!"
@@ -356,7 +356,7 @@
             else { 
                 qrcode.makeCode( 
                     document.querySelector( 
-                        "input"
+                        ".inputQR"
                     ).value); 
         }}
 
